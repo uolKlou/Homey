@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Menu | Homey</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="icon" href="img/logo.png">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/extras.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- The navbar is drawn here by js/nav.js -->
+    <div id="site-nav"></div>
+
+    <main>
+        <div class="container py-5">
+            <a href="browse.html" class="back-link font-weight-bold">&larr; All sellers</a>
+            <div id="sellerHeader" class="seller-header"></div>
+            <div class="row" id="dishGrid"></div>
+            <div class="empty-state" id="listingsEmpty" hidden>
+                <h3>No listings yet</h3>
+            </div>
+        </div>
+    </main>
+
+    <!-- The footer is drawn here by js/nav.js -->
+    <div id="site-footer"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/seller.js"></script>
+</body>
+
+</html>

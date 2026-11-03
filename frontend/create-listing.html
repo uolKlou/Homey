@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Create a listing | Homey</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="icon" href="img/logo.png">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/extras.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- The navbar is drawn here by js/nav.js -->
+    <div id="site-nav"></div>
+
+    <main>
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8 col-11 bg-light rounded p-4">
+                    <h1 class="py-3 text-center">Create a listing</h1>
+                    <div class="success-box" id="createDone" role="status" hidden>
+                        <h2>Listing created</h2>
+                        <p class="mb-2" id="createDoneText"></p>
+                        <a href="browse.html" id="viewMine">See it on your menu</a>
+                    </div>
+                    <form id="createForm" novalidate>
+                        <div class="mb-3">
+                            <label for="lName" class="form-label font-weight-bold">Name</label>
+                            <input type="text" class="form-control" id="lName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="lPrice" class="form-label font-weight-bold">Price (SAR)</label>
+                            <input type="number" class="form-control" id="lPrice" min="0" step="0.5">
+                        </div>
+                        <div class="mb-3">
+                            <label for="lDesc" class="form-label font-weight-bold">Description</label>
+                            <textarea class="form-control" id="lDesc"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lPhoto" class="form-label font-weight-bold">Photo</label>
+                            <input type="file" class="form-control" id="lPhoto" accept="image/*">
+                            <img class="preview" id="lPreview" alt="Photo preview" hidden>
+                        </div>
+                        <div class="mb-4">
+                            <label for="lCity" class="form-label font-weight-bold">Location</label>
+                            <select class="form-control" id="lCity">
+                                <option value="">Choose a city</option>
+                            </select>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary col-8 py-2 font-weight-bold" id="createBtn">Create listing</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- The footer is drawn here by js/nav.js -->
+    <div id="site-footer"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/create-listing.js"></script>
+</body>
+
+</html>

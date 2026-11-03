@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login | Homey</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="icon" href="img/logo.png">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/extras.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- The navbar is drawn here by js/nav.js -->
+    <div id="site-nav"></div>
+
+    <main>
+        <div class="container my-5 py-5">
+            <div class="row justify-content-center">
+            <div class="col-md-6 col-10 bg-light" style="width: 18rem; min-height: 500px;">
+             <h1 class="py-3 mt-5 text-center">Login</h1>
+
+                <form class="px-4" id="loginForm" novalidate>
+                    <div class="form-message" id="formError" role="alert" hidden></div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label font-weight-bold text-left">Email address</label>
+                        <input type="email" class="form-control py-2" id="email" name="email" autocomplete="email">
+                        <div class="field-error" id="emailError" aria-live="polite"></div>
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label font-weight-bold">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" autocomplete="current-password">
+                        <div class="field-error" id="passwordError" aria-live="polite"></div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary col-8 py-2 font-weight-bold text-center" id="submitBtn">Login</button>
+                    </div>
+                    <p class="text-center mt-3 mb-0">New here? <a href="signup.html">Create an account</a></p>
+
+                    <!-- Test accounts for the demo - delete this block when a real backend exists -->
+                    <details class="test-accounts mt-3 text-center">
+                        <summary>Test accounts for the demo</summary>
+                        <div>Customer: sara@example.com / Test1234</div>
+                        <div>Seller: chef@example.com / Test1234</div>
+                    </details>
+                </form>
+            </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- The footer is drawn here by js/nav.js -->
+    <div id="site-footer"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
